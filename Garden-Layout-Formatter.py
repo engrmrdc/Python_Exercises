@@ -1,19 +1,3 @@
-# Create a function named gardenLayoutFormatter that receives flowerDescriptions and order as its parameters.
-# This function aims to format and sort a list of flower descriptions based on a specified ordering criteria.
-# 
-# The function should perform the following steps:
-# 1. Format and sort the concatenated list based on the order parameter:
-# 2. If order is 'name', sort the flowers alphabetically by name and format each flower as "The {name} flower is {color} and grows up to {height} cm tall."
-# 3. If order is 'color', sort the flowers alphabetically by color and format each flower as "A {color} flower named {name}, with a height of {height} cm."
-# 4. If order is 'height', sort the flowers by their height (from shortest to tallest) and format each flower as "{height} cm: the {color} {name} reaches this height."
-# 5. Return the formatted and sorted flower descriptions as a single string, with each description on a new line.
-#
-# Parameters
-# flowerDescriptions (list of str): A list of strings where each string represents a description of a flower in the format "name:color:height". For example, ["Rose:red:50", "Lily:white:80", "Tulip:yellow:30"].
-# order (str): A string that specifies the ordering of the flowers based on their attributes. It can be one of the following values: 'name', 'color', or 'height'.
-# The function returns a string containing the formatted and sorted flower descriptions, with each description on a new line.
-
-
 def gardenLayoutFormatter(flowerDescriptions, order):
     if order == 'name':
         flowerDescriptions.sort()
