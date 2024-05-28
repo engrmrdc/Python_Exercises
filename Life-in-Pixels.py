@@ -29,6 +29,28 @@ def string_to_rgb(input_string):
     else:
         print([0, 0, 0])
 
+# Another solution
+
+def string_to_rgb(input_string):
+    # Check if the input string is empty or contains non-alphabetic characters.
+    if not input_string.isalpha():
+        return [0, 0, 0]
+
+    # Convert the input string to lowercase for case-insensitive mapping.
+    input_string = input_string.lower()
+
+    # Initialize RGB values to 0.
+    red, green, blue = 0, 0, 0
+
+    # Map each character to RGB values.
+    for char in input_string:
+        char_value = ord(char) - ord('a') + 1  # Map 'a' to 1, 'b' to 2, and so on.
+        red = (red + char_value) % 256
+        green = (green + char_value * 2) % 256
+        blue = (blue + char_value * 3) % 256
+
+    return [red, green, blue]
+
 # Under this line are the data for testing.
 
 # Input and Expected Outputs
